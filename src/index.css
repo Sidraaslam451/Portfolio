@@ -37,6 +37,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* fixed navbar height, so anchors don't hide under it */
   background: var(--navy);
 }
 
@@ -157,8 +158,8 @@ img {
     border: 1px solid rgba(242, 233, 228, 0.1);
     background: linear-gradient(
       145deg,
-      rgba(242, 233, 228, 0.06),
-      rgba(242, 233, 228, 0.015)
+      rgba(74, 78, 105, 0.45),
+      rgba(74, 78, 105, 0.12)
     );
     border-radius: 20px;
     transition:

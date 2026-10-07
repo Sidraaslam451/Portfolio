@@ -72,23 +72,27 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="border-t border-zinc-800 px-6 py-24 md:px-10 md:py-32"
+      className="border-t border-cream/[0.06] px-5 py-20 sm:px-6 md:px-10 md:py-24 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
 
         {/* Section Header */}
-        <div className="mb-16 max-w-3xl">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-            03 — Projects
-          </p>
+        <div className="mb-12 md:mb-16 max-w-3xl">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-dusty/70" />
 
-          <h2 className="font-['Space_Grotesk'] text-4xl font-bold tracking-tight text-white md:text-6xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-mauve">
+              04. Projects
+            </p>
+          </div>
+
+          <h2 className="font-['Space_Grotesk'] text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-cream sm:text-5xl lg:text-6xl">
             Selected work,
             <br />
-            <span className="text-zinc-500">built with purpose.</span>
+            <span className="text-mauve">built with purpose.</span>
           </h2>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-400 md:text-lg">
+          <p className="mt-6 max-w-2xl text-sm leading-8 text-mauve sm:text-base">
             A selection of web applications and websites focused on
             performance, responsiveness, clean design, and real-world
             usability.
@@ -100,14 +104,14 @@ function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.number}
-              className={`group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 ${
+              className={`group overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/[0.025] transition-all duration-300 hover:-translate-y-1 hover:border-dusty/40 ${
                 index === 0 ? "md:col-span-2" : ""
               }`}
             >
 
               {/* Project Visual */}
               <div
-                className={`relative overflow-hidden bg-zinc-900 ${
+                className={`relative overflow-hidden bg-dusk/30 ${
                   index === 0 ? "h-72 md:h-96" : "h-64"
                 }`}
               >
@@ -122,20 +126,20 @@ function Projects() {
               <div className="p-6 md:p-8">
 
                 <div className="mb-4 flex items-center justify-between gap-4">
-                  <span className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-500">
+                  <span className="text-xs font-medium uppercase tracking-[0.15em] text-mauve">
                     {project.category}
                   </span>
 
-                  <span className="text-sm text-zinc-600">
+                  <span className="text-sm text-mauve">
                     {project.number}
                   </span>
                 </div>
 
-                <h3 className="font-['Space_Grotesk'] text-2xl font-semibold text-white md:text-3xl">
+                <h3 className="font-['Space_Grotesk'] text-2xl font-semibold text-cream md:text-3xl">
                   {project.title}
                 </h3>
 
-                <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-400 md:text-base">
+                <p className="mt-4 max-w-2xl text-sm leading-6 text-cream/70 md:text-base">
                   {project.description}
                 </p>
 
@@ -144,7 +148,7 @@ function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-xs text-zinc-300"
+                      className="rounded-full border border-cream/15 bg-ink px-3 py-1.5 text-xs text-cream/85"
                     >
                       {tech}
                     </span>
@@ -157,7 +161,7 @@ function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium text-white transition-colors hover:text-zinc-400"
+                    className="text-sm font-medium text-cream transition-colors hover:text-cream/70"
                   >
                     Live Demo ↗
                   </a>
@@ -166,7 +170,7 @@ function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium text-zinc-400 transition-colors hover:text-white"
+                    className="text-sm font-medium text-cream/70 transition-colors hover:text-cream"
                   >
                     GitHub ↗
                   </a>

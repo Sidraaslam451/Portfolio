@@ -59,9 +59,9 @@ function Footer() {
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.06] px-6 pb-8 pt-20 md:px-10 lg:pt-24">
+    <footer className="relative overflow-hidden border-t border-cream/[0.06] px-5 pb-8 pt-16 sm:px-6 md:px-10 md:pt-20 lg:pt-24">
       {/* Ambient glow */}
-      <div className="pointer-events-none absolute bottom-[-220px] left-1/2 h-[450px] w-[650px] -translate-x-1/2 rounded-full bg-violet-500/[0.035] blur-[150px]" />
+      <div className="pointer-events-none absolute bottom-[-220px] left-1/2 h-[450px] w-[650px] -translate-x-1/2 rounded-full bg-dusty/[0.035] blur-[150px]" />
 
       <div className="relative mx-auto max-w-7xl">
         {/* Main footer */}
@@ -70,24 +70,24 @@ function Footer() {
           <div>
             <a
               href="#home"
-              className="inline-block font-[Space_Grotesk] text-3xl font-semibold tracking-[-0.04em] text-white transition-colors duration-300 hover:text-violet-200"
+              className="inline-block font-[Space_Grotesk] text-3xl font-semibold tracking-[-0.04em] text-cream transition-colors duration-300 hover:text-cream"
             >
-              Sidra<span className="text-violet-400">.</span>
+              Sidra<span className="text-dusty">.</span>
             </a>
 
-            <p className="mt-5 max-w-md text-sm leading-7 text-zinc-500">
+            <p className="mt-5 max-w-md text-sm leading-7 text-mauve">
               MERN Stack Developer building responsive websites and modern
               web applications for international clients.
             </p>
 
             {/* Availability */}
-            <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/[0.07] bg-white/[0.02] px-4 py-2.5">
+            <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-cream/[0.07] bg-cream/[0.02] px-4 py-2.5">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
 
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-600">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-mauve">
                 Available for freelance work
               </span>
             </div>
@@ -95,7 +95,7 @@ function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-700">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-mauve">
               Navigation
             </p>
 
@@ -104,9 +104,9 @@ function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group flex items-center gap-2 text-sm text-zinc-600 transition-colors duration-300 hover:text-white"
+                  className="group flex items-center gap-2 text-sm text-mauve transition-colors duration-300 hover:text-cream"
                 >
-                  <span className="h-px w-0 bg-violet-400 transition-all duration-300 group-hover:w-3" />
+                  <span className="h-px w-0 bg-dusty transition-all duration-300 group-hover:w-3" />
                   {item.label}
                 </a>
               ))}
@@ -115,7 +115,7 @@ function Footer() {
 
           {/* Socials */}
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-700">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-mauve">
               Connect
             </p>
 
@@ -128,7 +128,7 @@ function Footer() {
                   rel="noreferrer"
                   aria-label={social.name}
                   title={social.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.07] bg-white/[0.02] text-sm text-zinc-600 transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/20 hover:bg-violet-400/[0.06] hover:text-violet-200"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-cream/[0.07] bg-cream/[0.02] text-sm text-mauve transition-all duration-300 hover:-translate-y-1 hover:border-dusty/20 hover:bg-dusty/[0.06] hover:text-cream"
                 >
                   {social.icon}
                 </a>
@@ -137,7 +137,7 @@ function Footer() {
 
             <a
               href="mailto:aslamsidra876@gmail.com"
-              className="mt-6 inline-block text-xs text-zinc-600 transition-colors duration-300 hover:text-white"
+              className="mt-6 inline-block text-xs text-mauve transition-colors duration-300 hover:text-cream"
             >
               aslamsidra876@gmail.com
             </a>
@@ -145,21 +145,21 @@ function Footer() {
         </div>
 
         {/* Large brand statement */}
-        <div className="mt-20 overflow-hidden border-y border-white/[0.06] py-8">
-          <p className="select-none text-center font-[Space_Grotesk] text-[clamp(2.5rem,8vw,7rem)] font-semibold leading-none tracking-[-0.06em] text-white/[0.035]">
+        <div className="mt-14 overflow-hidden border-y border-cream/[0.06] py-8 md:mt-20">
+          <p className="select-none text-center font-[Space_Grotesk] text-[clamp(1.125rem,5vw,7rem)] font-semibold leading-none tracking-[-0.06em] text-cream/[0.035]">
             BUILD · CREATE · IMPROVE
           </p>
         </div>
 
         {/* Bottom bar */}
         <div className="flex flex-col gap-4 pt-7 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[11px] text-zinc-700">
+          <p className="text-[11px] text-mauve">
             © {new Date().getFullYear()} Sidra Aslam. All rights reserved.
           </p>
 
           <a
             href="#home"
-            className="group inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-700 transition-colors duration-300 hover:text-zinc-400"
+            className="group inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-mauve transition-colors duration-300 hover:text-cream/70"
           >
             Back to top
 
