@@ -1,94 +1,137 @@
-const achievements = [
-  {
-    number: "01",
-    title: "Hackathon Participation",
-    category: "Competition",
-    description:
-      "Participated in a development hackathon, collaborating on a project and applying technical skills under time constraints.",
-    year: "Add Year",
-  },
-  {
-    number: "02",
-    title: "Technical Learning",
-    category: "Professional Growth",
-    description:
-      "Continuously expanding my knowledge of web development through hands-on projects and exploring modern technologies.",
-    year: "Ongoing",
-  },
-  {
-    number: "03",
-    title: "Development Projects",
-    category: "Practical Experience",
-    description:
-      "Building practical web development projects to strengthen problem-solving skills and create real-world digital experiences.",
-    year: "Ongoing",
-  },
-];
-
 function Achievements() {
+  const achievements = [
+    {
+      number: "01",
+      value: "5+",
+      title: "Full-Stack Projects",
+      category: "Development",
+      description:
+        "Built and deployed full-stack and responsive web projects from concept through production.",
+    },
+    {
+      number: "02",
+      value: "20+",
+      title: "Reusable UI Components",
+      category: "Frontend Development",
+      description:
+        "Developed reusable interface components focused on consistency, efficiency, and maintainability.",
+    },
+    {
+      number: "03",
+      value: "FEM",
+      title: "Hackathon Participation",
+      category: "Hackathon",
+      description:
+        "Participated in an intensive full-stack development hackathon under the Saylani Mass Training Programme.",
+    },
+    {
+      number: "04",
+      value: "5+",
+      title: "Custom Web Solutions",
+      category: "Freelance",
+      description:
+        "Delivered custom web solutions covering development, responsive design, optimization, and deployment.",
+    },
+  ];
+
   return (
     <section
       id="achievements"
-      className="border-t border-zinc-800 px-6 py-24 md:px-10 md:py-32"
+      className="relative overflow-hidden border-t border-white/[0.06] px-6 py-24 md:px-10 lg:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute right-[-180px] top-1/4 h-[500px] w-[500px] rounded-full bg-violet-500/[0.035] blur-[150px]" />
 
-        {/* Header */}
-        <div className="mb-16 max-w-3xl">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-            07 — Achievements
-          </p>
+      <div className="relative mx-auto max-w-7xl">
+        {/* Heading */}
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-violet-400/70" />
 
-          <h2 className="font-['Space_Grotesk'] text-4xl font-bold text-white md:text-6xl">
-            Progress worth
-            <br />
-            <span className="text-zinc-500">celebrating.</span>
-          </h2>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+                09. Achievements
+              </p>
+            </div>
 
-          <p className="mt-6 text-base leading-7 text-zinc-400 md:text-lg">
-            Every project, challenge, and learning experience contributes
-            to my growth as a developer.
+            <h2 className="font-[Space_Grotesk] text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+              Milestones that
+              <span className="block text-zinc-500">
+                reflect my growth.
+              </span>
+            </h2>
+          </div>
+
+          <p className="max-w-2xl text-sm leading-8 text-zinc-500 sm:text-base">
+            A few milestones from my journey in web development, freelance
+            work, technical learning, and building real-world projects.
           </p>
         </div>
 
-        {/* Achievement Cards */}
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {achievements.map((item) => (
-            <article
-              key={item.number}
-              className="group rounded-2xl border border-zinc-800 bg-zinc-900/30 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600"
+        {/* Achievement cards */}
+        <div className="mt-16 grid gap-4 md:grid-cols-2">
+          {achievements.map((achievement) => (
+            <div
+              key={achievement.number}
+              className="premium-card group min-h-[300px] p-7 sm:p-8"
             >
-              <div className="mb-12 flex items-center justify-between">
-                <span className="text-sm text-zinc-600">
-                  {item.number}
-                </span>
+              {/* Background number */}
+              <span className="pointer-events-none absolute -right-3 -top-8 select-none font-[Space_Grotesk] text-[150px] font-semibold leading-none text-white/[0.025] transition-colors duration-500 group-hover:text-violet-300/[0.045]">
+                {achievement.number}
+              </span>
 
-                <span className="text-xl text-zinc-600 transition-colors group-hover:text-white">
-                  ✦
-                </span>
+              <div className="relative flex h-full flex-col">
+                {/* Top */}
+                <div className="flex items-start justify-between">
+                  <span className="font-[Space_Grotesk] text-5xl font-semibold tracking-[-0.05em] text-violet-300/70 transition-colors duration-300 group-hover:text-violet-200">
+                    {achievement.value}
+                  </span>
+
+                  <span className="rounded-full border border-white/[0.07] bg-white/[0.025] px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.15em] text-zinc-600">
+                    {achievement.category}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="mt-auto pt-12">
+                  <h3 className="font-[Space_Grotesk] text-2xl font-semibold tracking-tight text-white transition-colors duration-300 group-hover:text-violet-200">
+                    {achievement.title}
+                  </h3>
+
+                  <p className="mt-3 max-w-lg text-sm leading-7 text-zinc-500">
+                    {achievement.description}
+                  </p>
+                </div>
               </div>
 
-              <p className="text-xs uppercase tracking-[0.15em] text-zinc-500">
-                {item.category}
-              </p>
-
-              <h3 className="mt-3 font-['Space_Grotesk'] text-2xl font-semibold text-white">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 text-sm leading-6 text-zinc-400">
-                {item.description}
-              </p>
-
-              <div className="mt-8 border-t border-zinc-800 pt-5">
-                <span className="text-xs text-zinc-500">
-                  {item.year}
-                </span>
-              </div>
-            </article>
+              {/* Hover accent */}
+              <div className="absolute bottom-0 left-7 h-px w-0 bg-violet-400/70 transition-all duration-500 group-hover:w-20 sm:left-8" />
+            </div>
           ))}
         </div>
 
+        {/* Growth strip */}
+        <div className="relative mt-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.018] px-6 py-7 sm:px-8">
+          <div className="pointer-events-none absolute right-0 top-1/2 h-32 w-32 -translate-y-1/2 rounded-full bg-violet-500/[0.05] blur-[70px]" />
+
+          <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-violet-300/60">
+                Continuous Growth
+              </p>
+
+              <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-500">
+                Continuously learning, building, and improving through
+                real-world projects and development experiences.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 whitespace-nowrap text-xs text-zinc-600">
+              <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+              Still building
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

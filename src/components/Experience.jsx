@@ -1,127 +1,147 @@
-const experiences = [
-  {
-    number: "01",
-    period: "2024 — Present",
-    role: "Freelance Web Developer",
-    company: "Independent",
-    description:
-      "Building responsive websites and modern web applications for clients, while working with different requirements, technologies, and project ideas.",
-    skills: ["Web Development", "React", "MERN Stack"],
-  },
-  {
-    number: "02",
-    period: "2024 — Present",
-    role: "Web Development Learning & Projects",
-    company: "Personal & Academic Projects",
-    description:
-      "Continuously improving my development skills by building projects, exploring new technologies, and working with modern frontend and backend tools.",
-    skills: ["JavaScript", "Node.js", "MongoDB"],
-  },
-  {
-    number: "03",
-    period: "Experience",
-    role: "Teaching Experience",
-    company: "Eemaan Academy",
-    description:
-      "Teaching and supporting students while developing communication, explanation, and problem-solving skills alongside my technical journey.",
-    skills: ["Teaching", "Communication", "Problem Solving"],
-  },
-];
-
 function Experience() {
+  const experiences = [
+    {
+      number: "01",
+      role: "Web Developer",
+      company: "Remote Internship",
+      period: "3 Months",
+      description:
+        "Worked as a remote web developer intern, gaining practical experience in web development and working on real-world development tasks.",
+      type: "Professional Experience",
+    },
+    {
+      number: "02",
+      role: "Educator / Teacher",
+      company: "The Eeman Academy",
+      period: "3 Years",
+      description:
+        "Taught and mentored students while developing strong communication, problem-solving, and the ability to explain complex concepts clearly.",
+      type: "Teaching Experience",
+    },
+    {
+      number: "03",
+      role: "Freelance Web Developer",
+      company: "Freelance Projects",
+      period: "Ongoing",
+      description:
+        "Building responsive websites and modern web applications for clients while managing projects from development through deployment.",
+      type: "Freelance",
+    },
+  ];
+
   return (
     <section
       id="experience"
-      className="border-t border-zinc-800 px-6 py-24 md:px-10 md:py-32"
+      className="relative overflow-hidden border-t border-white/[0.06] px-6 py-24 md:px-10 lg:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[450px] w-[450px] rounded-full bg-violet-500/[0.03] blur-[140px]" />
 
-        {/* Header */}
-        <div className="mb-16 grid gap-8 md:grid-cols-2 md:items-end">
-
+      <div className="relative mx-auto max-w-7xl">
+        {/* Heading */}
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-              06 — Journey
-            </p>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-violet-400/70" />
 
-            <h2 className="font-['Space_Grotesk'] text-4xl font-bold tracking-tight text-white md:text-6xl">
-              My journey,
-              <br />
-              <span className="text-zinc-500">so far.</span>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+                08. Journey
+              </p>
+            </div>
+
+            <h2 className="font-[Space_Grotesk] text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+              Experience that
+              <span className="block text-zinc-500">
+                shaped my work.
+              </span>
             </h2>
           </div>
 
-          <p className="max-w-xl text-base leading-7 text-zinc-400 md:justify-self-end md:text-lg">
-            A growing journey shaped by development, learning, teaching,
-            projects, and continuous exploration of technology.
+          <p className="max-w-2xl text-sm leading-8 text-zinc-500 sm:text-base">
+            A combination of professional experience, teaching, and freelance
+            development has shaped the way I approach technology,
+            communication, and problem solving.
           </p>
-
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative mt-16">
+          {/* Vertical line */}
+          <div className="absolute bottom-0 left-[19px] top-0 hidden w-px bg-white/[0.07] md:block" />
 
-          {/* Timeline Line */}
-          <div className="absolute left-11px top-0 hidden h-full w-px bg-zinc-800 md:block" />
-
-          <div className="space-y-6">
+          <div className="space-y-5">
             {experiences.map((experience) => (
-              <article
+              <div
                 key={experience.number}
-                className="group relative rounded-2xl border border-zinc-800 bg-zinc-950 p-7 transition-all duration-300 hover:border-zinc-600 md:ml-10 md:p-9"
+                className="group relative md:pl-16"
               >
+                {/* Timeline dot */}
+                <div className="absolute left-[13px] top-8 hidden h-3 w-3 rounded-full border border-violet-300/40 bg-zinc-950 shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300 group-hover:scale-125 group-hover:border-violet-300/80 md:block" />
 
-                {/* Timeline Dot */}
-                <div className="absolute -left-51px top-10 hidden h-5 w-5 items-center justify-center rounded-full border border-zinc-700 bg-zinc-950 md:flex">
-                  <div className="h-2 w-2 rounded-full bg-zinc-500 transition-colors duration-300 group-hover:bg-white" />
-                </div>
+                <div className="premium-card p-6 sm:p-8 lg:p-9">
+                  <div className="grid gap-7 lg:grid-cols-[110px_1fr_170px] lg:items-start">
+                    {/* Number */}
+                    <div>
+                      <span className="font-[Space_Grotesk] text-4xl font-semibold tracking-[-0.04em] text-violet-300/40 transition-colors duration-300 group-hover:text-violet-300/70">
+                        {experience.number}
+                      </span>
 
-                {/* Top Row */}
-                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                      <p className="mt-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-zinc-700">
+                        Journey
+                      </p>
+                    </div>
 
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-500">
-                      {experience.period}
-                    </p>
+                    {/* Main content */}
+                    <div>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <span className="rounded-full border border-violet-400/10 bg-violet-400/[0.04] px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] text-violet-300/60">
+                          {experience.type}
+                        </span>
+                      </div>
 
-                    <h3 className="mt-3 font-['Space_Grotesk'] text-2xl font-semibold text-white md:text-3xl">
-                      {experience.role}
-                    </h3>
+                      <h3 className="mt-5 font-[Space_Grotesk] text-2xl font-semibold tracking-tight text-white transition-colors duration-300 group-hover:text-violet-200 sm:text-3xl">
+                        {experience.role}
+                      </h3>
 
-                    <p className="mt-1 text-sm text-zinc-500">
-                      {experience.company}
-                    </p>
+                      <p className="mt-2 text-sm text-zinc-500">
+                        {experience.company}
+                      </p>
+
+                      <p className="mt-5 max-w-2xl text-sm leading-7 text-zinc-500">
+                        {experience.description}
+                      </p>
+                    </div>
+
+                    {/* Period */}
+                    <div className="border-t border-white/[0.06] pt-5 lg:border-l lg:border-t-0 lg:pl-7 lg:pt-0">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-700">
+                        Duration
+                      </p>
+
+                      <p className="mt-2 font-[Space_Grotesk] text-lg font-medium text-zinc-300">
+                        {experience.period}
+                      </p>
+                    </div>
                   </div>
 
-                  <span className="text-sm text-zinc-700">
-                    {experience.number}
-                  </span>
-
+                  {/* Hover accent */}
+                  <div className="absolute bottom-0 left-0 h-px w-0 bg-violet-400/70 transition-all duration-500 group-hover:w-24" />
                 </div>
-
-                {/* Description */}
-                <p className="mt-6 max-w-3xl text-sm leading-7 text-zinc-400 md:text-base">
-                  {experience.description}
-                </p>
-
-                {/* Skills */}
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {experience.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-zinc-800 px-3 py-1.5 text-xs text-zinc-400"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-              </article>
+              </div>
             ))}
           </div>
-
         </div>
 
+        {/* Bottom statement */}
+        <div className="mt-10 flex flex-col gap-4 border-t border-white/[0.06] pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-zinc-700">
+            Learn · Experience · Build
+          </p>
+
+          <p className="text-xs text-zinc-700">
+            Every experience adds something to the next project.
+          </p>
+        </div>
       </div>
     </section>
   );

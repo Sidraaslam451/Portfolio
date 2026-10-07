@@ -9,21 +9,25 @@ import Experience from "./components/Experience";
 import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import GitHub from "./components/GitHub";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100">
+    <main className="min-h-screen bg-[var(--navy)] text-[var(--cream)]">
       <Navbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
+      <GitHub />
       <Services />
       <Process />
       <Experience />
       <Achievements />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

@@ -2,36 +2,234 @@
 
 @import "tailwindcss";
 
+/* Palette as Tailwind colors: bg-ink, text-cream, border-dusty/30 etc. */
+@theme {
+  --color-ink: #22223b;
+  --color-dusk: #4a4e69;
+  --color-mauve: #9a8c98;
+  --color-dusty: #c9ada7;
+  --color-cream: #f2e9e4;
+}
+
+/* -------------------------------- */
+/* Palette: Soft Lavender */
+/* -------------------------------- */
+
 :root {
+  --navy: #22223b;
+  --slate: #4a4e69;
+  --mauve: #9a8c98;
+  --rose: #c9ada7;
+  --cream: #f2e9e4;
+
+  --navy-deep: #1b1b2f;
+
   font-family: 'Inter', sans-serif;
-  color: #f5f5f5;
-  background: #09090b;
+  color: var(--cream);
+  background: var(--navy);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* NOTE: the old `* { margin: 0; padding: 0 }` reset was removed.
+   Unlayered, it overrides Tailwind v4 utilities (p-*, m-*, gap etc).
+   Tailwind's preflight already handles the reset. */
 
 html {
   scroll-behavior: smooth;
+  background: var(--navy);
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
-  background: #09090b;
+  background: var(--navy);
+  color: var(--cream);
+  overflow-x: hidden;
 }
 
 ::selection {
-  background: #ffffff;
-  color: #09090b;
+  background: var(--rose);
+  color: var(--navy);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 button,
 a {
-  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--slate);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mauve);
+}
+
+:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+}
+
+/* -------------------------------- */
+/* Custom components (in a layer so Tailwind utilities can override) */
+/* -------------------------------- */
+
+@layer components {
+  .section-shell {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(20px, 5vw, 48px);
+  }
+
+  .section-padding {
+    padding-block: clamp(72px, 10vw, 120px);
+  }
+
+  .eyebrow {
+    color: var(--mauve);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    color: var(--cream);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.875rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  .section-description {
+    max-width: 680px;
+    margin-top: 20px;
+    color: var(--mauve);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 768px) {
+    .section-description {
+      margin-top: 22px;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+  }
+
+  .premium-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(242, 233, 228, 0.1);
+    background: linear-gradient(
+      145deg,
+      rgba(242, 233, 228, 0.06),
+      rgba(242, 233, 228, 0.015)
+    );
+    border-radius: 20px;
+    transition:
+      border-color 300ms ease,
+      transform 300ms ease,
+      background 300ms ease;
+  }
+
+  .premium-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at top right,
+      rgba(201, 173, 167, 0.14),
+      transparent 35%
+    );
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  .premium-card:hover {
+    border-color: rgba(201, 173, 167, 0.35);
+    transform: translateY(-3px);
+  }
+
+  .premium-card:hover::before {
+    opacity: 1;
+  }
+
+  .accent {
+    color: var(--rose);
+  }
+
+  .accent-line {
+    background: var(--rose);
+  }
+
+  .page-grid {
+    background-image:
+      linear-gradient(rgba(242, 233, 228, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(242, 233, 228, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  @media (min-width: 768px) {
+    .page-grid {
+      background-size: 80px 80px;
+    }
+  }
+
+  .ambient-glow {
+    position: absolute;
+    pointer-events: none;
+    width: min(500px, 90vw);
+    height: min(500px, 90vw);
+    border-radius: 999px;
+    background: rgba(201, 173, 167, 0.07);
+    filter: blur(120px);
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .premium-card,
+  .premium-card::before {
+    transition: none;
+  }
 }

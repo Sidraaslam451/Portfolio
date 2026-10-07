@@ -1,140 +1,150 @@
-const skillCategories = [
-  {
-    number: "01",
-    title: "Frontend",
-    description: "Building responsive and interactive user interfaces.",
-    skills: [
-      { name: "HTML5", short: "HTML" },
-      { name: "CSS3", short: "CSS" },
-      { name: "JavaScript", short: "JS" },
-      { name: "React", short: "RE" },
-      { name: "Tailwind CSS", short: "TW" },
-    ],
-  },
-  {
-    number: "02",
-    title: "Backend",
-    description: "Creating reliable server-side applications and APIs.",
-    skills: [
-      { name: "Node.js", short: "NO" },
-      { name: "Express.js", short: "EX" },
-      { name: "REST APIs", short: "API" },
-    ],
-  },
-  {
-    number: "03",
-    title: "Database",
-    description: "Working with structured and scalable data storage.",
-    skills: [
-      { name: "MongoDB", short: "DB" },
-      { name: "Mongoose", short: "MG" },
-    ],
-  },
-  {
-    number: "04",
-    title: "Tools & Workflow",
-    description: "Tools I use to build, manage and deploy projects.",
-    skills: [
-      { name: "Git", short: "GIT" },
-      { name: "GitHub", short: "GH" },
-      { name: "VS Code", short: "VS" },
-      { name: "Vercel", short: "VC" },
-    ],
-  },
-];
-
 function Skills() {
+  const skillGroups = [
+    {
+      number: "01",
+      title: "Frontend",
+      description: "Building responsive and polished user interfaces.",
+      skills: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      number: "02",
+      title: "Backend",
+      description: "Creating reliable server-side applications and APIs.",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+      ],
+    },
+    {
+      number: "03",
+      title: "Database",
+      description: "Working with structured and flexible data systems.",
+      skills: [
+        "MongoDB",
+        "Mongoose",
+      ],
+    },
+    {
+      number: "04",
+      title: "Tools & Workflow",
+      description: "Tools that keep development organized and efficient.",
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Vercel",
+      ],
+    },
+  ];
+
   return (
     <section
       id="skills"
-      className="border-t border-white/5 px-6 py-28 lg:px-8 lg:py-36"
+      className="relative overflow-hidden border-t border-white/[0.06] px-6 py-24 md:px-10 lg:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute right-[-180px] top-1/4 h-96 w-96 rounded-full bg-violet-500/[0.035] blur-[140px]" />
 
+      <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
-        <div className="mb-16 max-w-3xl">
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-zinc-500">
-            02 — Skills
-          </p>
+        <div className="max-w-3xl">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-violet-400/70" />
 
-          <h2 className="font-[Space_Grotesk] text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+              03. Skills
+            </p>
+          </div>
+
+          <h2 className="font-[Space_Grotesk] text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
             Tools I use to turn
-            <span className="text-zinc-500"> ideas into products.</span>
+            <span className="block text-zinc-500">
+              ideas into products.
+            </span>
           </h2>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-500">
-            A collection of technologies and tools I use to design, develop,
-            manage, and deploy modern web applications.
+          <p className="mt-6 max-w-2xl text-sm leading-8 text-zinc-500 sm:text-base">
+            A practical stack built around modern frontend development,
+            scalable backend technologies, databases, and a workflow focused
+            on building reliable digital experiences.
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid gap-5 md:grid-cols-2">
-          {skillCategories.map((category) => (
+        {/* Skills grid */}
+        <div className="mt-16 grid gap-4 sm:grid-cols-2">
+          {skillGroups.map((group) => (
             <div
-              key={category.number}
-              className="group rounded-3xl border border-white/10 bg-white/0.02 p-7 transition-all duration-300 hover:border-white/20 hover:bg-white/0.04 sm:p-8"
+              key={group.number}
+              className="premium-card group min-h-[280px] p-7 sm:p-8"
             >
-              {/* Category Header */}
-              <div className="flex items-start justify-between">
+              {/* Large background number */}
+              <span className="pointer-events-none absolute -right-2 -top-5 select-none font-[Space_Grotesk] text-[130px] font-semibold leading-none text-white/[0.025] transition-colors duration-500 group-hover:text-violet-300/[0.045]">
+                {group.number}
+              </span>
+
+              {/* Top row */}
+              <div className="relative flex items-start justify-between">
                 <div>
-                  <span className="text-xs tracking-[0.2em] text-zinc-600">
-                    {category.number}
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-violet-300/60">
+                    {group.number}
                   </span>
 
-                  <h3 className="mt-3 font-[Space_Grotesk] text-2xl font-medium text-white">
-                    {category.title}
+                  <h3 className="mt-3 font-[Space_Grotesk] text-2xl font-semibold tracking-tight text-white transition-colors duration-300 group-hover:text-violet-200">
+                    {group.title}
                   </h3>
                 </div>
 
-                <span className="text-zinc-700 transition-colors duration-300 group-hover:text-zinc-400">
-                  ↗
-                </span>
+                <span className="mt-1 h-2 w-2 rounded-full bg-violet-400/60 shadow-[0_0_12px_rgba(167,139,250,0.35)]" />
               </div>
 
-              <p className="mt-4 max-w-md text-sm leading-7 text-zinc-500">
-                {category.description}
+              {/* Description */}
+              <p className="relative mt-4 max-w-sm text-sm leading-7 text-zinc-500">
+                {group.description}
               </p>
 
-              {/* Skills */}
-              <div className="mt-7 flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="group/skill flex items-center gap-2 rounded-full border border-white/10 bg-zinc-950/60 px-3 py-2 transition-all duration-200 hover:border-white/20 hover:bg-white/0.06"
+              {/* Skill pills */}
+              <div className="relative mt-7 flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-lg border border-white/[0.07] bg-white/[0.025] px-3 py-2 text-xs font-medium text-zinc-400 transition-all duration-300 group-hover:border-white/[0.11] group-hover:text-zinc-300"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/0.06 font-[Space_Grotesk] text-[9px] font-semibold text-zinc-400">
-                      {skill.short}
-                    </span>
-
-                    <span className="text-xs text-zinc-400 transition-colors group-hover/skill:text-zinc-200">
-                      {skill.name}
-                    </span>
-                  </div>
+                    {skill}
+                  </span>
                 ))}
               </div>
+
+              {/* Bottom accent */}
+              <div className="absolute bottom-0 left-7 h-px w-0 bg-violet-400/60 transition-all duration-500 group-hover:w-16 sm:left-8" />
             </div>
           ))}
         </div>
 
-        {/* Bottom statement */}
-        <div className="mt-8 rounded-3xl border border-white/10 bg-white/0.02 p-8 sm:p-10">
+        {/* Bottom learning strip */}
+        <div className="relative mt-5 overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.018] px-6 py-6 sm:px-8">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-zinc-600">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-violet-300/60">
                 Always learning
               </p>
 
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-400">
-                Technology keeps evolving, and so do I. I'm continuously
-                exploring new tools and better ways to build modern web
-                experiences.
+              <p className="mt-2 max-w-xl text-sm leading-7 text-zinc-500">
+                Exploring new technologies and improving my development
+                workflow through real-world projects and continuous practice.
               </p>
             </div>
 
-            <span className="shrink-0 font-[Space_Grotesk] text-4xl text-zinc-800">
-              04
-            </span>
+            <div className="flex items-center gap-2 text-xs text-zinc-600">
+              <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+              Growing with every project
+            </div>
           </div>
         </div>
       </div>

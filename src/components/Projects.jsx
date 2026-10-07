@@ -1,28 +1,71 @@
 const projects = [
   {
     number: "01",
-    title: "E-Commerce Platform",
-    category: "Full Stack Web Application",
+    title: "SupportFlow",
+    image: "/projects/supportflow.png",
+    category: "FEMHack 2026 • Full-Stack Project",
     description:
-      "A modern e-commerce platform with a responsive interface, product management, authentication, and a scalable backend.",
-    technologies: ["React", "Node.js", "MongoDB"],
+      "An AI-assisted support ticket management system built for FEMHack 2026. Customers can submit tickets while AI suggests the category, priority, and summary. Agents can review, communicate, manage ticket status, and resolve issues through a structured workflow.",
+    technologies: [
+      "Frontend",
+      "Backend",
+      "AI Assistant",
+      "Live Chat",
+      "Role-Based Access",
+    ],
+    link: "https://femhack-2026-m1z4.vercel.app/",
+    github: "https://github.com/Sidraaslam451/FEMHACK-2026",
   },
   {
     number: "02",
-    title: "Business Website",
-    category: "Web Design & Development",
+    title: "Interview IQ",
+    image: "/projects/interviewiq.png",
+    category: "AI-Powered Interview Platform",
     description:
-      "A professional business website designed to create a strong online presence and make it easy for customers to connect.",
-    technologies: ["React", "Tailwind CSS"],
+      "A production-ready AI-powered interview platform designed for anyone preparing for interviews. The application combines a full-stack backend with AI-based interview evaluation and automated email workflows using n8n, delivering an end-to-end interview practice experience.",
+    technologies: [
+      "Frontend",
+      "Backend",
+      "AI Evaluation",
+      "n8n Automation",
+      "Email Workflows",
+      "Production Deployment",
+    ],
+    link: "https://interview-iq-ai-app-n9wy.vercel.app/",
+    github: "https://github.com/Sidraaslam451/InterviewIQ-AI-app",
   },
   {
-    number: "03",
-    title: "Dashboard Application",
-    category: "MERN Stack",
-    description:
-      "A clean and responsive dashboard interface with structured data views and modern application architecture.",
-    technologies: ["React", "Express.js", "MongoDB"],
-  },
+  number: "03",
+  title: "University Portal",
+  image: "/projects/university-portal.png",
+  category: "Frontend Web Development",
+  description:
+    "A responsive university portal website built with HTML, CSS, and JavaScript. The project focuses on creating a clean and accessible interface for presenting university information, academic resources, and essential student-focused content.",
+  technologies: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Design",
+  ],
+  link: "https://university-portal-fawn.vercel.app/",
+  github: "https://github.com/Sidraaslam451/University-Portal",
+},
+{
+  number: "04",
+  title: "Multi-Vendor E-Commerce",
+  image: "/projects/multivendor-ecommerce.png",
+  category: "Frontend Web Development",
+  description:
+    "A responsive multi-vendor e-commerce website built with HTML, CSS, and JavaScript. The project focuses on creating a structured online shopping experience with product browsing, vendor-focused content, and interactive frontend functionality.",
+  technologies: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Design",
+  ],
+  link: "https://task-2-of-internship.vercel.app/",
+  github: "https://github.com/Sidraaslam451/Task-2-of-internship",
+},
 ];
 
 function Projects() {
@@ -54,7 +97,6 @@ function Projects() {
 
         {/* Projects Grid */}
         <div className="grid gap-6 md:grid-cols-2">
-
           {projects.map((project, index) => (
             <article
               key={project.number}
@@ -62,27 +104,18 @@ function Projects() {
                 index === 0 ? "md:col-span-2" : ""
               }`}
             >
+
               {/* Project Visual */}
               <div
-                className={`relative overflow-hidden bg-linear-to-br from-zinc-800 via-zinc-900 to-zinc-950 ${
+                className={`relative overflow-hidden bg-zinc-900 ${
                   index === 0 ? "h-72 md:h-96" : "h-64"
                 }`}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="mb-3 block text-5xl font-bold text-zinc-700">
-                      {project.number}
-                    </span>
-
-                    <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
-                      Project Preview
-                    </p>
-                  </div>
-                </div>
-
-                {/* Decorative elements */}
-                <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full border border-zinc-700/40" />
-                <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full border border-zinc-700/30" />
+                <img
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
 
               {/* Project Content */}
@@ -120,20 +153,30 @@ function Projects() {
 
                 {/* Links */}
                 <div className="mt-7 flex gap-6">
-                  <button className="text-sm font-medium text-white transition-colors hover:text-zinc-400">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium text-white transition-colors hover:text-zinc-400"
+                  >
                     Live Demo ↗
-                  </button>
+                  </a>
 
-                  <button className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium text-zinc-400 transition-colors hover:text-white"
+                  >
                     GitHub ↗
-                  </button>
+                  </a>
                 </div>
 
               </div>
             </article>
           ))}
-
         </div>
+
       </div>
     </section>
   );
