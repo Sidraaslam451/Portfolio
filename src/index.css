@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @import "tailwindcss";
 
@@ -11,47 +11,60 @@
   --color-cream: #f2e9e4;
 }
 
-/* -------------------------------- */
-/* Palette: Soft Lavender */
-/* -------------------------------- */
+/* Light mode: same class names, swapped values */
+:root[data-theme="light"] {
+  --color-ink: #f2e9e4;
+  --color-cream: #22223b;
+  --color-dusk: #d8c8c3;
+  --color-mauve: #6b5f69;
+  --color-dusty: #7d5e59;
+
+  /* darker status colors so they stay readable on a cream background */
+  --color-emerald-300: #065f46;
+  --color-emerald-400: #047857;
+  --color-red-300: #991b1b;
+  --color-red-400: #b91c1c;
+}
 
 :root {
-  --navy: #22223b;
-  --slate: #4a4e69;
-  --mauve: #9a8c98;
-  --rose: #c9ada7;
-  --cream: #f2e9e4;
+  --navy: var(--color-ink);
+  --slate: var(--color-dusk);
+  --mauve: var(--color-mauve);
+  --rose: var(--color-dusty);
+  --cream: var(--color-cream);
 
-  --navy-deep: #1b1b2f;
-
-  font-family: 'Inter', sans-serif;
-  color: var(--cream);
-  background: var(--navy);
+  font-family: "Inter", sans-serif;
+  color: var(--color-cream);
+  background: var(--color-ink);
+  color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 
-/* NOTE: the old `* { margin: 0; padding: 0 }` reset was removed.
-   Unlayered, it overrides Tailwind v4 utilities (p-*, m-*, gap etc).
-   Tailwind's preflight already handles the reset. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* fixed navbar height, so anchors don't hide under it */
-  background: var(--navy);
+  scroll-padding-top: 80px;
+  background: var(--color-ink);
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
-  background: var(--navy);
-  color: var(--cream);
+  background: var(--color-ink);
+  color: var(--color-cream);
   overflow-x: hidden;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 ::selection {
-  background: var(--rose);
-  color: var(--navy);
+  background: var(--color-dusty);
+  color: var(--color-ink);
 }
 
 h1,
@@ -59,7 +72,7 @@ h2,
 h3,
 h4,
 .font-display {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 button,
@@ -85,26 +98,22 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--navy);
+  background: var(--color-ink);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--slate);
+  background: var(--color-dusk);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--mauve);
+  background: var(--color-mauve);
 }
 
 :focus-visible {
-  outline: 2px solid var(--rose);
+  outline: 2px solid var(--color-dusty);
   outline-offset: 3px;
 }
-
-/* -------------------------------- */
-/* Custom components (in a layer so Tailwind utilities can override) */
-/* -------------------------------- */
 
 @layer components {
   .section-shell {
@@ -119,7 +128,7 @@ img {
   }
 
   .eyebrow {
-    color: var(--mauve);
+    color: var(--color-mauve);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.28em;
@@ -127,8 +136,8 @@ img {
   }
 
   .section-title {
-    color: var(--cream);
-    font-family: 'Space Grotesk', sans-serif;
+    color: var(--color-cream);
+    font-family: "Space Grotesk", sans-serif;
     font-size: clamp(1.875rem, 5vw, 4rem);
     font-weight: 600;
     line-height: 1.1;
@@ -139,7 +148,7 @@ img {
   .section-description {
     max-width: 680px;
     margin-top: 20px;
-    color: var(--mauve);
+    color: var(--color-mauve);
     font-size: 15px;
     line-height: 1.8;
   }
@@ -155,11 +164,11 @@ img {
   .premium-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(242, 233, 228, 0.1);
+    border: 1px solid color-mix(in srgb, var(--color-cream) 10%, transparent);
     background: linear-gradient(
       145deg,
-      rgba(74, 78, 105, 0.45),
-      rgba(74, 78, 105, 0.12)
+      color-mix(in srgb, var(--color-cream) 6%, transparent),
+      color-mix(in srgb, var(--color-cream) 1.5%, transparent)
     );
     border-radius: 20px;
     transition:
@@ -175,7 +184,7 @@ img {
     pointer-events: none;
     background: radial-gradient(
       circle at top right,
-      rgba(201, 173, 167, 0.14),
+      color-mix(in srgb, var(--color-dusty) 14%, transparent),
       transparent 35%
     );
     opacity: 0;
@@ -183,7 +192,7 @@ img {
   }
 
   .premium-card:hover {
-    border-color: rgba(201, 173, 167, 0.35);
+    border-color: color-mix(in srgb, var(--color-dusty) 35%, transparent);
     transform: translateY(-3px);
   }
 
@@ -192,17 +201,24 @@ img {
   }
 
   .accent {
-    color: var(--rose);
+    color: var(--color-dusty);
   }
 
   .accent-line {
-    background: var(--rose);
+    background: var(--color-dusty);
   }
 
   .page-grid {
     background-image:
-      linear-gradient(rgba(242, 233, 228, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(242, 233, 228, 0.03) 1px, transparent 1px);
+      linear-gradient(
+        color-mix(in srgb, var(--color-cream) 3%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--color-cream) 3%, transparent) 1px,
+        transparent 1px
+      );
     background-size: 64px 64px;
   }
 
@@ -218,12 +234,11 @@ img {
     width: min(500px, 90vw);
     height: min(500px, 90vw);
     border-radius: 999px;
-    background: rgba(201, 173, 167, 0.07);
+    background: color-mix(in srgb, var(--color-dusty) 10%, transparent);
     filter: blur(120px);
   }
 }
 
-/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

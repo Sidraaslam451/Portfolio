@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -58,7 +59,7 @@ function Navbar() {
           onClick={handleLinkClick}
           className="font-[Space_Grotesk] text-xl font-bold tracking-tight text-cream"
         >
-          Sidra<span className="text-mauve">.</span>
+          Sidra<span className="text-dusty">.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -87,6 +88,8 @@ function Navbar() {
             );
           })}
 
+          <ThemeToggle />
+
           <a
             href="#contact"
             onClick={handleLinkClick}
@@ -96,34 +99,38 @@ function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/10 text-cream transition-colors hover:bg-cream/10 lg:hidden"
-        >
-          <span className="relative block h-5 w-5">
-            <span
-              className={`absolute left-0 top-1/2 h-px w-5 bg-current transition-transform duration-300 ${
-                isOpen ? "rotate-45" : "-translate-y-1.5"
-              }`}
-            />
+        {/* Mobile: theme toggle + menu button */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
 
-            <span
-              className={`absolute left-0 top-1/2 h-px w-5 bg-current transition-opacity duration-200 ${
-                isOpen ? "opacity-0" : "opacity-100"
-              }`}
-            />
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/10 text-cream transition-colors hover:bg-cream/10"
+          >
+            <span className="relative block h-5 w-5">
+              <span
+                className={`absolute left-0 top-1/2 h-px w-5 bg-current transition-transform duration-300 ${
+                  isOpen ? "rotate-45" : "-translate-y-1.5"
+                }`}
+              />
 
-            <span
-              className={`absolute left-0 top-1/2 h-px w-5 bg-current transition-transform duration-300 ${
-                isOpen ? "-rotate-45" : "translate-y-1.5"
-              }`}
-            />
-          </span>
-        </button>
+              <span
+                className={`absolute left-0 top-1/2 h-px w-5 bg-current transition-opacity duration-200 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+
+              <span
+                className={`absolute left-0 top-1/2 h-px w-5 bg-current transition-transform duration-300 ${
+                  isOpen ? "-rotate-45" : "translate-y-1.5"
+                }`}
+              />
+            </span>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}

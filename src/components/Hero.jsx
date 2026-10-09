@@ -38,7 +38,7 @@ function Hero() {
         className="pointer-events-none absolute inset-0 -z-20 opacity-[0.03]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(242,233,228,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(242,233,228,0.8) 1px, transparent 1px)",
+            "linear-gradientcolor-mix(in srgb, var(--color-cream) 80%, transparent) 1px, transparent 1px), linear-gradient(90deg, rgba(242,233,228,0.8) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
@@ -89,7 +89,7 @@ function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
             <a
               href="#projects"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-dusty px-7 py-3.5 text-sm font-semibold text-ink shadow-[0_0_30px_rgba(201,173,167,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cream hover:shadow-[0_0_35px_rgba(242,233,228,0.25)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-dusty px-7 py-3.5 text-sm font-semibold text-ink shadow-[0_0_30px_rgba(201,173,167,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cream hover:shadow-[0_0_35px_color-mix(in srgb, var(--color-cream) 80%, transparent)]"
             >
               View My Work
 

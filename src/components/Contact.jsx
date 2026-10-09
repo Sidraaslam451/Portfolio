@@ -15,6 +15,8 @@ function Contact() {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const projectTypes = [
     "Business Website",
     "Landing Page",
@@ -49,10 +51,18 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
     setStatus({
       type: "",
       message: "",
     });
+
+    // Stop waiting if the network hangs for too long
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
 
     try {
       const response = await fetch("https://formspree.io/f/xzeznnav", {
@@ -62,6 +72,7 @@ function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify(formData),
+        signal: controller.signal,
       });
 
       if (!response.ok) {
@@ -87,6 +98,9 @@ function Contact() {
         message:
           "Something went wrong. Please try again or contact me on WhatsApp.",
       });
+    } finally {
+      clearTimeout(timeout);
+      setIsSubmitting(false);
     }
   };
 
@@ -360,13 +374,23 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-dusty px-7 py-3.5 text-xs font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream"
+                  disabled={isSubmitting}
+                  className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-dusty px-7 py-3.5 text-xs font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-dusty"
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-ink/30 border-t-ink" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
 
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                    </>
+                  )}
                 </button>
               </div>
             </form>
