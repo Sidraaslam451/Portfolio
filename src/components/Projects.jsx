@@ -19,7 +19,7 @@ const projects = [
   {
     number: "02",
     title: "Interview IQ",
-    image: "/projects/interviewiq.png",
+    image: "/projects/InterviewIQ.png",
     category: "AI-Powered Interview Platform",
     description:
       "A production-ready AI-powered interview platform designed for anyone preparing for interviews. The application combines a full-stack backend with AI-based interview evaluation and automated email workflows using n8n, delivering an end-to-end interview practice experience.",
@@ -53,7 +53,7 @@ const projects = [
 {
   number: "04",
   title: "Multi-Vendor E-Commerce",
-  image: "/projects/multivendor-ecommerce.png",
+  image: "/projects/multi-vendor.png",
   category: "Frontend Web Development",
   description:
     "A responsive multi-vendor e-commerce website built with HTML, CSS, and JavaScript. The project focuses on creating a structured online shopping experience with product browsing, vendor-focused content, and interactive frontend functionality.",
@@ -72,7 +72,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="border-t border-cream/[0.06] px-5 py-20 sm:px-6 md:px-10 md:py-24 lg:py-32"
+      className="border-t border-cream/6 px-5 py-20 sm:px-6 md:px-10 md:py-24 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
 
@@ -104,7 +104,7 @@ function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.number}
-              className={`group overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/[0.025] transition-all duration-300 hover:-translate-y-1 hover:border-dusty/40 ${
+              className={`group overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/2.5 transition-all duration-300 hover:-translate-y-1 hover:border-dusty/40 ${
                 index === 0 ? "md:col-span-2" : ""
               }`}
             >
