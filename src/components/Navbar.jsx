@@ -61,12 +61,12 @@ function Navbar() {
           className="shrink-0"
         >
           <img
-            src="/wordmark-dark.svg"
+            src="/projects/wordmark-dark.svg"
             alt="Sidra Aslam"
             className="logo-dark h-9 w-auto sm:h-10"
           />
           <img
-            src="/wordmark-light.svg"
+            src="/projects/wordmark-light.svg"
             alt=""
             aria-hidden="true"
             className="logo-light h-9 w-auto sm:h-10"

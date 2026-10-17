@@ -74,12 +74,12 @@ function Footer() {
               className="inline-block"
             >
               <img
-                src="/wordmark-dark.svg"
+                src="/projects/wordmark-dark.svg"
                 alt="Sidra Aslam"
                 className="logo-dark h-11 w-auto sm:h-12"
               />
               <img
-                src="/wordmark-light.svg"
+                src="/projects/wordmark-light.svg"
                 alt=""
                 aria-hidden="true"
                 className="logo-light h-11 w-auto sm:h-12"
