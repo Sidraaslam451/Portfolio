@@ -1,8 +1,4 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Hero() {
   const socialLinks = [
@@ -38,40 +34,52 @@ function Hero() {
         className="pointer-events-none absolute inset-0 -z-20 opacity-[0.03]"
         style={{
           backgroundImage:
-            "linear-gradientcolor-mix(in srgb, var(--color-cream) 80%, transparent) 1px, transparent 1px), linear-gradient(90deg, rgba(242,233,228,0.8) 1px, transparent 1px)",
+            "linear-gradient(color-mix(in srgb, var(--color-cream) 80%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--color-cream) 80%, transparent) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
 
       <div className="mx-auto w-full max-w-7xl py-10 sm:py-16 lg:py-24">
         <div className="max-w-5xl">
-
           {/* Availability Badge */}
           <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-cream/10 bg-cream/[0.04] px-4 py-2 text-xs font-medium text-mauve backdrop-blur-sm transition-colors duration-300 hover:border-dusty/40 hover:text-cream sm:mb-8">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-
             Available for freelance work
           </div>
 
           {/* Intro */}
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-mauve sm:text-sm">
-            Hello, I'm
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-mauve sm:text-sm">
+            Hello, I'm Sidra Aslam
           </p>
-
           {/* Main Heading */}
-          <h1 className="font-[Space_Grotesk] text-[clamp(2.5rem,11.5vw,3.5rem)] font-semibold leading-[1] tracking-[-0.04em] text-cream sm:text-7xl sm:leading-[0.95] md:text-8xl lg:text-[7.5rem]">
-            Sidra
-            <span className="relative ml-2 inline-block whitespace-nowrap text-dusty sm:ml-3">
-              Aslam
-              <span className="absolute -bottom-2 left-1 h-px w-16 bg-mauve sm:w-24" />
+          <h1 className="font-[Space_Grotesk] text-[clamp(2.25rem,9.5vw,6.5rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-cream">
+            I build websites
+            <span className="block">
+              <span className="relative inline-block text-dusty">
+                people remember.
+                {/* Hand-drawn underline */}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 300 12"
+                  preserveAspectRatio="none"
+                  className="absolute -bottom-2 left-0 h-2 w-full text-dusty/70 sm:-bottom-3 sm:h-3"
+                  fill="none"
+                >
+                  <path
+                    d="M2 8C60 2 120 12 180 5S280 9 298 4"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
             </span>
           </h1>
-
           {/* Role */}
-          <div className="mt-8 flex items-center gap-3 sm:mt-9 sm:gap-4">
+          <div className="mt-10 flex items-center gap-3 sm:mt-12 sm:gap-4">
             <span className="h-px w-8 shrink-0 bg-dusk sm:w-12" />
 
             <h2 className="font-[Space_Grotesk] text-lg font-medium text-cream/90 sm:text-2xl">
@@ -81,8 +89,8 @@ function Hero() {
 
           {/* Description */}
           <p className="mt-5 max-w-2xl text-sm leading-7 text-mauve sm:mt-6 sm:text-lg sm:leading-8">
-            I build high-level responsive websites and modern web
-            applications for international clients.
+            I build high-level responsive websites and modern web applications
+            for international clients.
           </p>
 
           {/* CTA Buttons */}
@@ -92,7 +100,6 @@ function Hero() {
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-dusty px-7 py-3.5 text-sm font-semibold text-ink shadow-[0_0_30px_rgba(201,173,167,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cream hover:shadow-[0_0_35px_color-mix(in srgb, var(--color-cream) 80%, transparent)]"
             >
               View My Work
-
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
@@ -112,7 +119,6 @@ function Hero() {
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-cream/10 px-7 py-3.5 text-sm font-medium text-mauve transition-all duration-300 hover:-translate-y-1 hover:border-cream/30 hover:text-cream"
             >
               View Resume
-
               <span className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
                 ↗
               </span>
@@ -135,9 +141,7 @@ function Hero() {
                 title={social.name}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/10 bg-cream/[0.03] text-mauve transition-all duration-300 hover:-translate-y-1 hover:border-dusty/50 hover:bg-cream/[0.08] hover:text-dusty"
               >
-                <span className="text-base">
-                  {social.icon}
-                </span>
+                <span className="text-base">{social.icon}</span>
               </a>
             ))}
           </div>
@@ -149,9 +153,7 @@ function Hero() {
         href="#about"
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-mauve/70 transition-colors hover:text-cream lg:flex"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em]">
-          Scroll
-        </span>
+        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
 
         <span className="relative h-10 w-px overflow-hidden bg-dusk">
           <span className="absolute left-0 top-0 h-1/2 w-full animate-pulse bg-dusty" />
