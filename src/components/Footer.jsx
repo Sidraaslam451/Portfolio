@@ -70,9 +70,20 @@ function Footer() {
           <div>
             <a
               href="#home"
-              className="inline-block font-[Space_Grotesk] text-3xl font-semibold tracking-[-0.04em] text-cream transition-colors duration-300 hover:text-cream"
+              aria-label="Sidra Aslam, back to top"
+              className="inline-block"
             >
-              Sidra<span className="text-dusty">.</span>
+              <img
+                src="/wordmark-dark.svg"
+                alt="Sidra Aslam"
+                className="logo-dark h-11 w-auto sm:h-12"
+              />
+              <img
+                src="/wordmark-light.svg"
+                alt=""
+                aria-hidden="true"
+                className="logo-light h-11 w-auto sm:h-12"
+              />
             </a>
 
             <p className="mt-5 max-w-md text-sm leading-7 text-mauve">

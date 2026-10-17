@@ -249,3 +249,14 @@ img {
     transition: none;
   }
 }
+.logo-light {
+  display: none;
+}
+
+:root[data-theme="light"] .logo-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .logo-light {
+  display: block;
+}

@@ -57,9 +57,20 @@ function Navbar() {
         <a
           href="#home"
           onClick={handleLinkClick}
-          className="font-[Space_Grotesk] text-xl font-bold tracking-tight text-cream"
+          aria-label="Sidra Aslam, home"
+          className="shrink-0"
         >
-          Sidra<span className="text-dusty">.</span>
+          <img
+            src="/wordmark-dark.svg"
+            alt="Sidra Aslam"
+            className="logo-dark h-9 w-auto sm:h-10"
+          />
+          <img
+            src="/wordmark-light.svg"
+            alt=""
+            aria-hidden="true"
+            className="logo-light h-9 w-auto sm:h-10"
+          />
         </a>
 
         {/* Desktop Navigation */}
