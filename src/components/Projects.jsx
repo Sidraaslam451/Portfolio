@@ -43,6 +43,31 @@ const projects = [
     link: "https://interview-iq-ai-app-n9wy.vercel.app/",
     github: "https://github.com/Sidraaslam451/InterviewIQ-AI-app",
   },
+      {
+    title: "SMIT Connect Portal",
+    category: "Full-Stack",
+    description:
+      "A student portal built for SMIT that brings admissions, course information, and leave management together in one place, giving students a simple and organized way to handle their academic requests online.",
+    technologies: ["React", "Tailwind CSS", "Responsive Design"],
+    link: "https://smit-connect-portal-kabc.vercel.app/",
+    github: "https://github.com/Sidraaslam451/SMIT-connect-portal",
+  },
+
+      {
+    title: "PitchCraft",
+    category: "Full-Stack",
+    description:
+      "An AI-powered startup partner that helps founders turn their ideas into clear, actionable plans. It uses AI-integrated suggestions to guide key decisions, with user accounts and a full-stack architecture behind it.",
+    technologies: [
+      "Frontend",
+      "Backend",
+      "AI Integration",
+      "Authentication",
+    ],
+    link: "https://frontend-of-pitch-craft.vercel.app/register",
+    github: "https://github.com/Sidraaslam451/PITCH-CRAFT",
+  },
+
   {
     title: "University Portal",
     category: "Frontend",
@@ -61,6 +86,16 @@ const projects = [
     link: "https://task-2-of-internship.vercel.app/",
     github: "https://github.com/Sidraaslam451/Task-2-of-internship",
   },
+      {
+    title: "Supabase Auth System",
+    category: "Full-Stack",
+    description:
+      "A user authentication system built with Supabase, featuring sign-up and sign-in pages with secure email and password login. It shows how to connect a frontend to a backend service to create and manage real user accounts.",
+    technologies: ["Supabase", "Authentication", "JavaScript", "HTML5", "CSS3"],
+    link: "https://supabase-login-form.vercel.app/index.html",
+    github: "https://github.com/Sidraaslam451/supabase-login-form",
+  },
+
     {
     title: "Expense Tracker",
     category: "Frontend",
@@ -80,15 +115,6 @@ const projects = [
     github: "https://github.com/Sidraaslam451/Tic-Tac-Toe",
   },
     {
-    title: "SMIT Connect Portal",
-    category: "Full-Stack",
-    description:
-      "A student portal built for SMIT that brings admissions, course information, and leave management together in one place, giving students a simple and organized way to handle their academic requests online.",
-    technologies: ["React", "Tailwind CSS", "Responsive Design"],
-    link: "https://smit-connect-portal-kabc.vercel.app/",
-    github: "https://github.com/Sidraaslam451/SMIT-connect-portal",
-  },
-    {
     title: "First Portfolio",
     category: "Frontend",
     description:
@@ -96,20 +122,6 @@ const projects = [
     technologies: ["React", "Responsive Design"],
     link: "https://frontend-sigma-two-y4o9bgl5z3.vercel.app/",
     github: "https://github.com/Sidraaslam451/Mern-stack-portfolio-website",
-  },
-    {
-    title: "PitchCraft",
-    category: "Full-Stack",
-    description:
-      "An AI-powered startup partner that helps founders turn their ideas into clear, actionable plans. It uses AI-integrated suggestions to guide key decisions, with user accounts and a full-stack architecture behind it.",
-    technologies: [
-      "Frontend",
-      "Backend",
-      "AI Integration",
-      "Authentication",
-    ],
-    link: "https://frontend-of-pitch-craft.vercel.app/register",
-    github: "https://github.com/Sidraaslam451/PITCH-CRAFT",
   },
     {
     title: "Ramadan Calculator",
@@ -259,15 +271,6 @@ const projects = [
     technologies: ["JavaScript", "HTML5", "CSS3", "Local Storage"],
     link: "https://to-do-app-seven-azure-66.vercel.app/",
     github: "https://github.com/Sidraaslam451/TO-DO-APP",
-  },
-    {
-    title: "Supabase Auth System",
-    category: "Full-Stack",
-    description:
-      "A user authentication system built with Supabase, featuring sign-up and sign-in pages with secure email and password login. It shows how to connect a frontend to a backend service to create and manage real user accounts.",
-    technologies: ["Supabase", "Authentication", "JavaScript", "HTML5", "CSS3"],
-    link: "https://supabase-login-form.vercel.app/index.html",
-    github: "https://github.com/Sidraaslam451/supabase-login-form",
   },
     {
     title: "Canopy Systems",
