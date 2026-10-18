@@ -163,8 +163,7 @@ function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col gap-4 pt-7 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[11px] text-mauve">
+        <div className="flex flex-col gap-4 pb-12 pt-7 sm:flex-row sm:items-center sm:justify-between">          <p className="text-[11px] text-mauve">
             © {new Date().getFullYear()} Sidra Aslam. All rights reserved.
           </p>
 

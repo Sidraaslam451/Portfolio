@@ -10,13 +10,12 @@ function Achievements() {
     },
     {
       number: "02",
-      value: "20+",
-      title: "Reusable UI Components",
-      category: "Frontend Development",
+      value: "25+",
+      title: "Live Projects",
+      category: "Development",
       description:
-        "Developed reusable interface components focused on consistency, efficiency, and maintainability.",
-    },
-    {
+        "Built and deployed responsive websites and web apps, each with a live demo and source code.",
+    },    {
       number: "03",
       value: "FEM",
       title: "Hackathon Participation",
@@ -26,13 +25,12 @@ function Achievements() {
     },
     {
       number: "04",
-      value: "5+",
-      title: "Custom Web Solutions",
-      category: "Freelance",
+      value: "85%",
+      title: "Hackathon Score",
+      category: "Course Hackathon",
       description:
-        "Delivered custom web solutions covering development, responsive design, optimization, and deployment.",
-    },
-  ];
+        "Scored 85% in my course's first hackathon by building a complete, responsive landing page.",
+    },  ];
 
   return (
     <section

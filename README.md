@@ -1,16 +1,41 @@
-# React + Vite
+# Hi 👋, I'm Sidra Aslam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### MERN Stack Developer | Web Developer
 
-Currently, two official plugins are available:
+I build responsive websites and modern web applications for international clients.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[🌐 Portfolio](https://YOUR-SITE-URL) • [💼 LinkedIn](https://www.linkedin.com/in/sidra-aslam-755765313) • [📸 Instagram](https://www.instagram.com/sidra.webdev/) • [📩 Email](mailto:aslamsidra876@gmail.com)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+![](https://skillicons.dev/icons?i=html,css,js,react,tailwind,nodejs,express,mongodb,git,github,vscode,vercel)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Featured Projects
+
+### 🤖 Interview IQ
+AI-powered interview platform with automated email workflows.
+🔗 [Live Demo](https://interview-iq-ai-app-n9wy.vercel.app/) • 📂 [Source Code](https://github.com/Sidraaslam451/InterviewIQ-AI-app)
+
+### 🎫 SupportFlow
+AI-assisted support ticket system built for FEMHack 2026.
+🔗 [Live Demo](https://femhack-2026-m1z4.vercel.app/) • 📂 [Source Code](https://github.com/Sidraaslam451/FEMHACK-2026)
+
+### 🌸 Maison de Fleur
+Luxury botanical boutique website with Framer Motion animations.
+🔗 [Live Demo](https://botanical-atelier-website.vercel.app/) • 📂 [Source Code](https://github.com/Sidraaslam451/Botanical-Atelier-Website)
+
+### 🍽️ MR.CONE
+Premium restaurant landing page with menu and reservation form.
+🔗 [Live Demo](https://restaurant-home-pg.vercel.app/) • 📂 [Source Code](https://github.com/Sidraaslam451/Restaurant-home-pg)
+
+---
+
+## 🤝 Let's Connect
+
+Open to freelance projects and collaboration. Reach out by email or on LinkedIn.
+
+⭐ Thanks for visiting my profile!

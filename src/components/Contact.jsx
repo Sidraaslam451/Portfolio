@@ -281,24 +281,41 @@ function Contact() {
                     Project Type
                   </label>
 
-                  <select
-                    id="projectType"
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    required
-                    className="w-full appearance-none rounded-xl border border-cream/[0.07] bg-ink/50 px-4 py-3.5 text-sm text-cream/70 outline-none transition-all duration-300 focus:border-dusty/30 focus:bg-cream/[0.025]"
-                  >
-                    <option value="" disabled>
-                      Select a project
-                    </option>
-
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
+                  <div className="relative">
+                    <select
+                      id="projectType"
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleChange}
+                      required
+                      className="w-full appearance-none rounded-xl border border-cream/[0.07] bg-ink/50 py-3.5 pl-4 pr-10 text-sm text-cream/70 outline-none transition-all duration-300 focus:border-dusty/30 focus:bg-cream/[0.025]"
+                    >
+                      <option value="" disabled>
+                        Select a project
                       </option>
-                    ))}
-                  </select>
+
+                      {projectTypes.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))}
+                    </select>
+
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-mauve"
+                    >
+                      <path
+                        d="M5 7.5l5 5 5-5"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 {/* Budget */}
@@ -310,24 +327,41 @@ function Contact() {
                     Budget
                   </label>
 
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    required
-                    className="w-full appearance-none rounded-xl border border-cream/[0.07] bg-ink/50 px-4 py-3.5 text-sm text-cream/70 outline-none transition-all duration-300 focus:border-dusty/30 focus:bg-cream/[0.025]"
-                  >
-                    <option value="" disabled>
-                      Select a budget
-                    </option>
-
-                    {budgets.map((budget) => (
-                      <option key={budget} value={budget}>
-                        {budget}
+                  <div className="relative">
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleChange}
+                      required
+                      className="w-full appearance-none rounded-xl border border-cream/[0.07] bg-ink/50 py-3.5 pl-4 pr-10 text-sm text-cream/70 outline-none transition-all duration-300 focus:border-dusty/30 focus:bg-cream/[0.025]"
+                    >
+                      <option value="" disabled>
+                        Select a budget
                       </option>
-                    ))}
-                  </select>
+
+                      {budgets.map((budget) => (
+                        <option key={budget} value={budget}>
+                          {budget}
+                        </option>
+                      ))}
+                    </select>
+
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-mauve"
+                    >
+                      <path
+                        d="M5 7.5l5 5 5-5"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
 

@@ -8,13 +8,13 @@ import {
 function GitHub() {
   const stats = [
     {
-      value: "5+",
-      label: "Projects",
+      value: "50+",
+      label: "Repositories",
       icon: <FaCode />,
     },
     {
-      value: "20+",
-      label: "Components",
+      value: "25+",
+      label: "Live Projects",
       icon: <FaCodeBranch />,
     },
     {
@@ -23,7 +23,6 @@ function GitHub() {
       icon: <FaStar />,
     },
   ];
-
   return (
     <section
       id="github"
