@@ -224,6 +224,42 @@ const projects = [
     link: "https://js-assignment-9to20-chapters.vercel.app/",
     github: "https://github.com/Sidraaslam451/JS-assignment-9to20-chapters",
   },
+    {
+    title: "JavaScript Logic Showcase",
+    category: "Frontend",
+    description:
+      "A course practice project covering JavaScript conditions, arrays and loops through 40+ exercises. Each one shows the question, the logic and a live output, and many can be run with your own input, like a marks and grade calculator, a simple calculator, a traffic signal checker and a multiplication table generator.",
+    technologies: ["JavaScript", "HTML5", "CSS3"],
+    link: "https://assignment-chapter-11-to-30.vercel.app/",
+    github: "https://github.com/Sidraaslam451/Assignment-chapter-11-to-30",
+  },
+    {
+    title: "Password Generator",
+    category: "Frontend",
+    description:
+      "A secure password generator that creates random passwords instantly. Users can choose the length and include lowercase, uppercase, numbers and symbols, copy the result in one click, check its strength, and view a list of recently generated passwords.",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
+    link: "https://password-generator-sigma-tawny.vercel.app/",
+    github: "https://github.com/Sidraaslam451/Password_Generator",
+  },
+    {
+    title: "Kababjees Menu Clone",
+    category: "Frontend",
+    description:
+      "A UI clone of a fast-food ordering website, built as a practice project with a focus on layout and long, content-heavy pages. It includes a category navigation grid, popular items, deal sections with add-to-cart buttons, and a responsive footer with app download links.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    link: "https://kababjees-clone-eight.vercel.app/",
+    github: "https://github.com/Sidraaslam451/Kababjees-Clone",
+  },
+    {
+    title: "TaskFlow",
+    category: "Frontend",
+    description:
+      "A clean and simple to-do app for managing daily tasks. Users can add tasks, mark them as done, filter by All, Pending or Done, clear completed tasks in one click, and keep a live count of pending work. Tasks are saved in the browser automatically, so nothing is lost on refresh.",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Local Storage"],
+    link: "https://to-do-app-seven-azure-66.vercel.app/",
+    github: "https://github.com/Sidraaslam451/TO-DO-APP",
+  },
   // ---- Template for a new project (copy from here) ----
   // {
   //   title: "Project Name",
