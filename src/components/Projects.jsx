@@ -260,6 +260,33 @@ const projects = [
     link: "https://to-do-app-seven-azure-66.vercel.app/",
     github: "https://github.com/Sidraaslam451/TO-DO-APP",
   },
+    {
+    title: "Supabase Auth System",
+    category: "Full-Stack",
+    description:
+      "A user authentication system built with Supabase, featuring sign-up and sign-in pages with secure email and password login. It shows how to connect a frontend to a backend service to create and manage real user accounts.",
+    technologies: ["Supabase", "Authentication", "JavaScript", "HTML5", "CSS3"],
+    link: "https://supabase-login-form.vercel.app/index.html",
+    github: "https://github.com/Sidraaslam451/supabase-login-form",
+  },
+    {
+    title: "Canopy Systems",
+    category: "Business Website",
+    description:
+      "A professional multi-page website for a cloud infrastructure and custom software company, with Home, About, Services, Portfolio and Contact pages. It features animated stats, a live system status ticker, a clear process section and a consultation call-to-action, all in a clean, corporate and fully responsive design.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Multi-Page", "Responsive Design"],
+    link: "https://internship-tasks-five.vercel.app/",
+    github: "https://github.com/Sidraaslam451/Task-1-of-internship",
+  },
+    {
+    title: "L'ÉCARLATE Perfumes",
+    category: "Landing Page",
+    description:
+      "A concept website for a luxury perfume house, designed with an elegant, high-end look to present the brand and its fragrances. Built with a fully responsive layout that keeps the refined feel on every screen size.",
+    technologies: ["React", "Responsive Design"],
+    link: "https://luxury-perfumes-website.vercel.app/",
+    github: "https://github.com/Sidraaslam451/Luxury-perfumes-website",
+  },
   // ---- Template for a new project (copy from here) ----
   // {
   //   title: "Project Name",
