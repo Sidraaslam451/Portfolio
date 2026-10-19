@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-flax-mu-48.vercel.app/sitemap.xml
