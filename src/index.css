@@ -258,6 +258,7 @@ img {
 :root[data-theme="light"] .logo-light {
   display: block;
 }
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
